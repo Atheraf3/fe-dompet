@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm Ledger & Emerald Paper - Light Mode */
+    --background: 36 33% 97%;
+    --foreground: 240 6% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+    --primary: 175 77% 26%;
+    --primary-foreground: 36 33% 98%;
+    --secondary: 34 24% 92%;
+    --secondary-foreground: 240 6% 12%;
+    --muted: 34 22% 93%;
+    --muted-foreground: 25 6% 32%;
+    --accent: 173 45% 91%;
+    --accent-foreground: 175 80% 18%;
+    --destructive: 347 77% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 34 18% 86%;
+    --input: 34 18% 82%;
+    --ring: 175 77% 26%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Warm Ledger & Emerald Paper - Dark Mode */
+    --background: 160 8% 7%;
+    --foreground: 40 15% 95%;
+    --card: 162 8% 10%;
+    --card-foreground: 40 15% 95%;
+    --popover: 162 8% 10%;
+    --popover-foreground: 40 15% 95%;
+    --primary: 173 80% 40%;
+    --primary-foreground: 176 65% 8%;
+    --secondary: 162 8% 15%;
+    --secondary-foreground: 40 15% 94%;
+    --muted: 162 8% 14%;
+    --muted-foreground: 30 7% 68%;
+    --accent: 173 35% 16%;
+    --accent-foreground: 172 72% 78%;
+    --destructive: 350 85% 64%;
+    --destructive-foreground: 160 10% 8%;
+    --border: 162 8% 18%;
+    --input: 162 8% 20%;
+    --ring: 173 80% 40%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    caret-color: hsl(var(--primary));
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Themed subtle scrollbar for ledger lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
