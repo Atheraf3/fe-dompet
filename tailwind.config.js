@@ -42,6 +42,14 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        mauve: {
+          50: '#E2DDE7',
+          300: '#AAA2B3',
+          500: '#716879',
+          700: '#45404F',
+          900: '#292531',
+          950: '#17151C',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
